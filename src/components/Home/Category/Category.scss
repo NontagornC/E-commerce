@@ -1,0 +1,63 @@
+@import "../../../css-config/mixins.scss";
+
+.shop_by_category {
+  padding: 25px 0;
+  @include md {
+    padding: 50px 0;
+  }
+  .categories {
+    display: flex;
+    flex-flow: wrap;
+    gap: 10px;
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: calc(50% - 5px);
+      @include md {
+        width: calc(25% - 10px);
+      }
+      .span_container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #4d4d4d;
+        span {
+          margin: 20px 0;
+          font-size: 14px;
+          font-weight: 800;
+          text-transform: uppercase;
+          color: white;
+          @include md {
+            font-size: 18px;
+          }
+        }
+      }
+      .category {
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        background-color: white;
+        img {
+          width: 50%;
+          max-height: 150px;
+          display: block;
+          padding-top: 10px;
+          padding-bottom: 15px;
+          margin-left: auto;
+          margin-right: auto;
+          transition: all ease 0.3s;
+          @include md {
+            max-height: 200px;
+          }
+        }
+      }
+      &:hover {
+        transform: scale(1.2);
+        transition: transform 0.7s;
+      }
+    }
+  }
+}

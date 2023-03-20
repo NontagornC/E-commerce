@@ -1,0 +1,115 @@
+@import "../../css-config/mixins.scss";
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom, #868b8d, #2a2a2a);
+  .text_container {
+    color: white;
+    border: none;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    h1 {
+      color: #c41134;
+      text-shadow: 4px 4px 0 rgba(255, 255, 255, 0.7);
+      padding: 20px 0;
+      font-size: 25px;
+      @include md {
+        font-size: 80px;
+        padding: 35px 0;
+      }
+    }
+    span {
+      padding: 10px 25px;
+      font-size: 15px;
+      @include md {
+        font-size: 30px;
+        padding: 20px 120px;
+      }
+      span {
+        color: #c41134;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 0;
+        @include md {
+          font-size: 36px;
+          padding: 0;
+        }
+      }
+    }
+  }
+  .detail_container {
+    padding-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include md {
+      flex-direction: row;
+    }
+    .left {
+      width: calc(100% - 20px);
+      @include md {
+        width: calc(50% - 10px);
+        padding: 20px;
+      }
+      img {
+        padding: 10px;
+        width: 100%;
+        @include md {
+          padding: 0;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: calc(100% - 20px);
+      color: white;
+      line-height: 1.5;
+      @include md {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: calc(50% - 10px);
+        padding: 20px;
+      }
+      h1 {
+        font-size: 20px;
+        font-weight: 700;
+        padding: 20px 10px;
+        span {
+          color: #c41134;
+          font-size: 20px;
+          font-weight: 700;
+          padding: 0;
+          @include md {
+            font-size: 40px;
+          }
+        }
+        @include md {
+          font-size: 40px;
+          font-weight: 700;
+          padding: 20px 0;
+        }
+      }
+      span {
+        font-size: 14px;
+        padding: 10px 10px;
+        @include md {
+          font-size: 20px;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}

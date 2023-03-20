@@ -1,0 +1,105 @@
+@import "../../../css-config/mixins.scss";
+.main_banner {
+  padding: 40px 0;
+  position: relative;
+  background-image: linear-gradient(to bottom, #2a2a2a, #868b8d);
+  @include md {
+    height: calc(100vh - 80px);
+  }
+  .content {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    max-width: calc(100% - 20px);
+    position: relative;
+    @include md {
+      flex-direction: row;
+      max-width: 1200px;
+    }
+    .banner_img {
+      position: relative;
+      z-index: 9;
+      width: 330px;
+      margin-bottom: 20px;
+      @include md {
+        width: 500px;
+        margin-right: 60px;
+        margin-top: 50px;
+        margin-bottom: 0;
+      }
+      @include xxl {
+        width: 600px;
+        margin-right: 0;
+        margin-top: 0;
+      }
+    }
+    .text_content {
+      z-index: 10;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include md {
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      @include xxl {
+        left: 0;
+      }
+      h1 {
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 20px;
+        color: #c41134;
+        text-shadow: 10px 10px 0 rgba(196, 17, 52, 0.3);
+        @include md {
+          font-size: 180px;
+        }
+      }
+      p {
+        max-width: 300px;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+        @include md {
+          max-width: 500px;
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 40px;
+        }
+      }
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        .btn_banner {
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 700;
+          width: fit-content;
+          border: 2px solid white;
+          padding: 10px 20px;
+          cursor: pointer;
+
+          &.v2 {
+            background-color: #c41134;
+            border: 2px solid #c41134;
+            color: #2a2a2a;
+          }
+          &:hover {
+            transform: scale(1.2);
+            transition: transform 0.7s;
+          }
+        }
+      }
+    }
+  }
+}
